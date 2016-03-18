@@ -110,8 +110,8 @@ public class Universe {
         double dt = Double.parseDouble(args[0]);
         while (true) {
             StdDraw.clear();
-            StdDraw.setPenColor(Color.black);
-            StdDraw.filledRectangle(0, 0, 1e5, 1e5);
+//            StdDraw.setPenColor(Color.black);
+//            StdDraw.filledRectangle(0, 0, 1e5, 1e5);
             newton.increaseTime(dt);
             newton.draw();
             StdDraw.show(10);
