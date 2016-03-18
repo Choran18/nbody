@@ -5,17 +5,10 @@ import edu.princeton.cs.StdDraw;
 import java.awt.Color;
 
 /**
- * ****************************************************************************
- * Compilation: javac Universe.java Execution: java Universe dt input.txt
- * Dependencies: Body.java Vector.java StdIn.java StdDraw.java Datafiles:
- * http://www.cs.princeton.edu/introcs/34nbody/2body.txt
- * http://www.cs.princeton.edu/introcs/34nbody/3body.txt
- * http://www.cs.princeton.edu/introcs/34nbody/4body.txt
- * http://www.cs.princeton.edu/introcs/34nbody/2bodyTiny.txt
  *
  * This data-driven program simulates motion in the universe defined by the
  * standard input stream, increasing time at the rate on the command line.
- *
+ * 
  * % java Universe 25000 4body.txt
  *
  *
@@ -118,7 +111,7 @@ public class Universe {
         while (true) {
             StdDraw.clear();
             StdDraw.setPenColor(Color.black);
-            StdDraw.filledRectangle(0, 0, 6e2, 6e2);
+            StdDraw.filledRectangle(0, 0, 1e5, 1e5);
             newton.increaseTime(dt);
             newton.draw();
             StdDraw.show(10);
