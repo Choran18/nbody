@@ -4,10 +4,11 @@ import edu.princeton.cs.StdDraw;
 import java.awt.Color;
 
 /******************************************************************************
- *  This class is what creates the orbiting bodies and simulates their
+ * <p> 
+ * This class is what creates the orbiting bodies and simulates their
  * gravity. It contains the methods that also move and draw the bodies where
  * we alter color and size.
- *
+ *</p>
  *
  ******************************************************************************/
 
