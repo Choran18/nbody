@@ -4,11 +4,9 @@ import edu.princeton.cs.StdDraw;
 import java.awt.Color;
 
 /******************************************************************************
- *  Compilation:  javac Body.java
- *  Execution:    java Body
- *  Dependencies: Vector.java StdDraw.java
- *
- *  Implementation of a 2D Body with a position, velocity and mass.
+ *  This class is what creates the orbiting bodies and simulates their
+ * gravity. It contains the methods that also move and draw the bodies where
+ * we alter color and size.
  *
  *
  ******************************************************************************/

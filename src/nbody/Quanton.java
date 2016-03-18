@@ -9,8 +9,11 @@ import edu.princeton.cs.StdDraw;
 import java.awt.Color;
 
 /**
- *
- * @author Choran7
+ *This class is intended to simulate the motion of quantons
+ * or electrostatic particles, mainly electrons and protons.
+ * This is accomplished using Coulomb's Law and adding
+ * charge to the equation in place of mass.
+ * 
  */
 public class Quanton {
 
