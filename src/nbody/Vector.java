@@ -111,7 +111,6 @@ public class Vector {
         return c;
     } // times( double )
 
-
     // return the corresponding unit vector
     public Vector direction() {
         if (this.magnitude() == 0.0) {

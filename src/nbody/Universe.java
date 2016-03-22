@@ -3,6 +3,7 @@ package nbody;
 import edu.princeton.cs.In;
 import edu.princeton.cs.StdDraw;
 import java.awt.Color;
+import java.util.Scanner;
 
 /**
  *
@@ -70,6 +71,34 @@ public class Universe {
         }// for
     } // Universe()
 
+    public void UserValues() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Number of boides or quantons = ");
+        double N = scanner.nextInt();
+        System.out.println("Radius of Universe = ");
+        double radius = scanner.nextDouble();
+        
+        dots = new Quanton[N];
+        for (int i = 1; i <= N; i++) {
+            System.out.println("X-Posiition " + i + " = ");
+            double rx = scanner.nextDouble();
+            System.out.println("Y-Position " + i + " = ");
+            double ry = scanner.nextDouble();
+            System.out.println("X-Velocity " + i + " = ");
+            double vx = scanner.nextDouble();
+            System.out.println("Y-Velocity " + i + " = ");
+            double vy = scanner.nextDouble();
+            System.out.println("Charge " + i + " = ");
+            double charge = scanner.nextDouble();
+            System.out.println("Mass " + i + " = ");
+            double mass = scanner.nextDouble();
+            double[] position = {rx, ry};
+            double[] velocity = {vx, vy};
+            Vector r = new Vector(position);
+            Vector v = new Vector(velocity);
+            dots[i] = new Quanton(r, v, charge, mass);
+        }//for
+    
     // increment time by dt units, assume forces are constant in given interval
     public void increaseTime(double dt) {
 
@@ -96,6 +125,10 @@ public class Universe {
         } // for
     } // increaseTime( double )
 
+    public void maxVelocity(){
+        
+    }//maxVelocity
+    
     // draw the N bodies
     public void draw() {
         for (int i = 0; i < N; i++) {
@@ -106,12 +139,33 @@ public class Universe {
 
     // client to simulate a universe
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Number of boides or quantons = ");
+        double N = scanner.nextDouble();
+        System.out.println("Radius of Universe = ");
+        double radius = scanner.nextDouble();
+        
+        for(int i = 1; i <= N; i++){
+        System.out.println("X-Posiition " + i + " = ");
+        double rx = scanner.nextDouble();
+        System.out.println("Y-Position " + i + " = ");
+        double ry = scanner.nextDouble();
+        System.out.println("X-Velocity " + i + " = ");
+        double vx = scanner.nextDouble();
+        System.out.println("Y-Velocity " + i + " = ");
+        double vy = scanner.nextDouble();
+        System.out.println("Charge " + i + " = ");
+        double charge = scanner.nextDouble();
+        System.out.println("Mass " + i + " = ");
+        double mass = scanner.nextDouble();
+        }//for
+        
         Universe newton = new Universe( args[1] );
         double dt = Double.parseDouble(args[0]);
         while (true) {
             StdDraw.clear();
-//            StdDraw.setPenColor(Color.black);
-//            StdDraw.filledRectangle(0, 0, 1e5, 1e5);
+            StdDraw.setPenColor(Color.black);
+            StdDraw.filledRectangle(0, 0, 6e10, 6e10);
             newton.increaseTime(dt);
             newton.draw();
             StdDraw.show(10);
